@@ -2,7 +2,7 @@ import { screen } from '@testing-library/react';
 import renderWithRouter from '../renderWithRouter';
 import { About } from '../pages';
 
-describe.only('Teste o componente <About.tsx />', () => {
+describe('Teste o componente <About.tsx />', () => {
   test('Teste se a página contém as informações sobre a Pokédex', () => {
     renderWithRouter(<About />);
     const textAbout = screen.getByRole('heading', { name: /What does this app do?/i });
