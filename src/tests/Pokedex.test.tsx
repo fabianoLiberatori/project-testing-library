@@ -153,6 +153,7 @@ describe('Teste o componente <Pokedex.tsx />', () => {
     const allBtn = screen.getByRole('button', { name: /all/i });
     const buttonNext = screen.getByRole('button', { name: /Próximo Pokémon/i });
 
+    await userEvent.click(buttonNext);
     await userEvent.click(allBtn);
     const pikachu = screen.getByText(/pikachu/i);
     const eletric = screen.getByTestId(pokType);
