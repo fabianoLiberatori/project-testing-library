@@ -159,6 +159,7 @@ describe('Teste o componente <Pokedex.tsx />', () => {
 
     expect(pikachu).toBeInTheDocument();
     expect(allBtn).toBeInTheDocument();
+    expect(allBtn.textContent).toEqual('All');
     expect(eletric.textContent).toEqual('Electric');
 
     await userEvent.click(buttonNext);
@@ -167,6 +168,7 @@ describe('Teste o componente <Pokedex.tsx />', () => {
 
     expect(charmander).toBeInTheDocument();
     expect(allBtn).toBeInTheDocument();
+    expect(allBtn.textContent).toEqual('All');
     expect(fire.textContent).toEqual('Fire');
   });
 });
